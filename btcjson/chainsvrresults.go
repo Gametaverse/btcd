@@ -531,13 +531,13 @@ type ScriptSig struct {
 // getrawtransaction, decoderawtransaction, and searchrawtransaction use the
 // same structure.
 type Vin struct {
-	Coinbase  string      `json:"coinbase"`
-	Txid      string      `json:"txid"`
-	Vout      uint32      `json:"vout"`
-	ScriptSig *ScriptSig  `json:"scriptSig"`
-	Sequence  uint32      `json:"sequence"`
-	Witness   []string    `json:"txinwitness"`
-	PreOut    *VinPrevOut `json:"prevout"`
+	Coinbase  string     `json:"coinbase"`
+	Txid      string     `json:"txid"`
+	Vout      uint32     `json:"vout"`
+	ScriptSig *ScriptSig `json:"scriptSig"`
+	Sequence  uint32     `json:"sequence"`
+	Witness   []string   `json:"txinwitness"`
+	PreOut    Vout       `json:"prevout"`
 }
 
 // IsCoinBase returns a bool to show if a Vin is a Coinbase one or not.
