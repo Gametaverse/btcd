@@ -522,8 +522,9 @@ type GetNetTotalsResult struct {
 // applies to non-coinbase.  Therefore the field in the Vin structure needs
 // to be a pointer.
 type ScriptSig struct {
-	Asm string `json:"asm"`
-	Hex string `json:"hex"`
+	Asm     string `json:"asm"`
+	Hex     string `json:"hex"`
+	Address string `json:"address"`
 }
 
 // Vin models parts of the tx data.  It is defined separately since
